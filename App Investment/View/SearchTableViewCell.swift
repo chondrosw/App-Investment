@@ -12,4 +12,10 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var assetNameLabel: UILabel!
     @IBOutlet weak var assetSymbolLabel: UILabel!
     @IBOutlet weak var assetTypeLabel: UILabel!
+    
+    func configure(with searchResult: SearchResult){
+        assetNameLabel.text = searchResult.the2Name
+        assetSymbolLabel.text = searchResult.the1Symbol
+        assetTypeLabel.text = searchResult.the3Type.appending(" ").appending(searchResult.the8Currency)
+    }
 }
